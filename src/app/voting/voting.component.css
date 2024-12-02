@@ -1,0 +1,112 @@
+/* Estilo para o retângulo "Justiça Eleitoral" */
+
+:root {
+    --color-gray: #6c757d;
+    --color-light-gray: #e9ecef;
+    --color-dark-gray: #444;
+    --color-darker-gray: #333;
+    --color-border-gray: #222;
+    --color-orange: #e67e22;
+    --color-dark-orange: #d35400;
+    --color-green: #27ae60;
+    --color-dark-green: #1e8449;
+}
+
+
+.header-box {
+    height: 80px;
+    background-color: #f8f9fa;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-box h5 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6c757d;
+    text-transform: uppercase;
+}
+
+/* Estilo para a tela do lado esquerdo */
+.screen-box {
+    height: 300px;
+    background-color: #e9ecef;
+    border: 2px solid #6c757d;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen-box input {
+    width: 60px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Estilo dos botões do teclado */
+.btn-key {
+    height: 60px;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #444;
+    border: 2px solid #222;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Efeito ao pressionar os botões */
+.btn-key:active {
+    background-color: #333;
+    transform: translateY(2px);
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos botões de ação */
+.btn-action {
+    height: 60px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-action-branco {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #ccc;
+}
+
+.btn-action-branco:active {
+    background-color: #f1f1f1;
+    transform: translateY(2px);
+}
+
+.btn-action-corrige {
+    background-color: #e67e22;
+    color: #fff;
+    border: 2px solid #d35400;
+}
+
+.btn-action-corrige:active {
+    background-color: #d35400;
+    transform: translateY(2px);
+}
+
+.btn-action-confirma {
+    background-color: #27ae60;
+    color: #fff;
+    border: 2px solid #1e8449;
+}
+
+.btn-action-confirma:active {
+    background-color: #1e8449;
+    transform: translateY(2px);
+}

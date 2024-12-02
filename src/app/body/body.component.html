@@ -1,0 +1,6 @@
+<main class="container">
+    <app-voting [votos]="votos"></app-voting>
+    <app-results [votos]="votos" (listaAtualizada)="processarLista($event)"></app-results>
+</main>
+  
+  

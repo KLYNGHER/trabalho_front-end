@@ -1,18 +1,18 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { VotoService } from '../../services/voto.service';
 import { Voto } from '../../models/voto-manager';
 
 @Component({
   selector: 'app-voting',
   standalone: true,
-  imports: [],
   templateUrl: './voting.component.html',
-  styleUrl: './voting.component.css'
+  styleUrls: ['./voting.component.css'],
 })
-
 export class VotingComponent {
-  @Input() votos!: { [key: number]: Voto }; // Armazena os votos como um mapa
-  campo1: string = ''; // Primeiro número do voto
-  campo2: string = ''; // Segundo número do voto
+  campo1: string = '';
+  campo2: string = '';
+
+  constructor(private votoService: VotoService) {}
 
   inserir(valor: number): void {
     if (!this.campo1) {
@@ -28,18 +28,15 @@ export class VotingComponent {
   }
 
   votar(): void {
-    const candidato = parseInt(this.campo1 + this.campo2, 10); // Concatena os campos para formar o número do candidato
-    if (this.votos[candidato]) {
-      this.votos[candidato].votos++; // Incrementa o voto para o candidato existente
-    } else {
-      this.votos[candidato] = new Voto({ candidato, votos: 1 }); // Adiciona um novo candidato com um voto
-    }
-
-    alert(`Voto registrado para o candidato ${candidato}`);
-    this.corrige(); // Limpa os campos após registrar o voto
+    const candidato = parseInt(this.campo1 + this.campo2, 10);
+    const novoVoto: Voto = { candidato, votos: 1 };
+    this.votoService.registrarVoto(novoVoto);
+    this.corrige();
   }
 
   votarBranco(): void {
+    const votoBranco: Voto = { candidato: 0, votos: 1 }; // Candidato "0" representa voto em branco
+    this.votoService.registrarVoto(votoBranco);
     alert('Voto registrado em BRANCO.');
     this.corrige();
   }

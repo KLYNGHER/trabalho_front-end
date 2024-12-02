@@ -1,6 +1,17 @@
-<main class="container">
-    <app-voting [votos]="votos"></app-voting>
-    <app-results [votos]="votos" (listaAtualizada)="processarLista($event)"></app-results>
-</main>
+<div class="container">
+    <!-- Interface da Urna -->
+    <div class="row">
+      <div class="col-12">
+        <app-voting></app-voting>
+      </div>
+    </div>
+  
+    <!-- Interface dos Resultados -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <app-results></app-results>
+      </div>
+    </div>
+  </div>
   
   

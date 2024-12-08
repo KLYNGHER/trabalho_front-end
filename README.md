@@ -1,27 +1,58 @@
-# UrnaEletronica
+# Urna Eletronica
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.11.
+## Sobre
 
-## Development server
+Este projeto é uma atividade avaliativa da disciplina Desenvolvimento Front-End do IFRN/Parnamirim.
+Tem por objetivo simular em formato de aplicação Web um sistema de votação, análogo a Urna eletrônica utilizada nos processos eleitorais do Brasil.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+ ## Componentes
 
-## Code scaffolding
+  Klyngher Emidio
+  Aristides Neto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 1. Recursos necessário
 
-## Build
+  Para desenvolver esse sistema foram usados este recursos:
+- Ambiente de desenvolvimento do VsCode;
+- Linguagens - Angular CLI versão 18.2.11 e TypeScript versão 4.9.3;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 2. Procedimento de Instalação da Aplicação
 
-## Running unit tests
+- Instalar o NodeJS (https://nodejs.org). Obs: Prefira a versão LTS;
+```
+  npm install -g typescript
+```
+- Instalar o @angular/cli digite o comando a seguir na linha de comando.
+```
+  npm install -g @angular/cli
+```
+- criando o projeto.
+```
+  ng new trabalho_front-end
+```
+- criando componentes
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+  ng g c <componente>
+```
+## 3. Implementação 
 
-## Running end-to-end tests
+o projeto é composto por 5 componentes, um modelo e um serviço:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- HeaderComponent => composto o template e lógica para o cabeçalho;
+- FooterComponent => composto o template e lógica para o rodapé;
+- BodyComponent   => composto por dois componentes o VotingComponent e o ResultsComponent;
+  -  VotingComponent => componente principal, responsável por criar e manipular a lógica de manipulação template-componente da interface web com o usuário;
+  -  ResultsComponent => componente responsável por criar a estrutura de um formulário básico que irá armazenar a contagem dos votos;
+- Appcomponente => compnente principal, usado para exibir as inferfaces do projeto;
+- voto-manager.ts => modelo para determinar a estrutura básica de cada voto, baseado na interface IVoto;
+- voto.service.ts => reponsável por fazer a comuniçação em tempo real entre os componentes, disponbilizando os métodos da classe VotoService;
 
-## Further help
+## 4. Servidor de Desenvolvimento
+Execute ng serve para iniciar o servidor de desenvolvimento. Acesse http://localhost:4200/. A aplicação será recarregada automaticamente sempre que você alterar qualquer arquivo fonte.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## Observação:
+o uso do serviço causou redundância quanto alguns inputs e outputs do código, o que pode ser observado nos códigos comentados do projeto.
+
+## Ajuda Adicional
+Para mais informações sobre o Angular CLI, use ng help ou consulte a página Angular CLI Overview and Command Reference.

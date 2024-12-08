@@ -1,8 +1,8 @@
 footer {
-  margin-top: 20px; /* Espaçamento acima do footer */
-  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); /* Adiciona um leve destaque */
-  background-color: #FFD700; /* Amarelo dourado */
-  color: #000; /* Preto para o texto, garantindo contraste */
+  margin-top: 20px; 
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2); 
+  background-color: #FFD700; 
+  color: #000; 
 }
 
 

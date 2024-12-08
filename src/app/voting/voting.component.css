@@ -2,7 +2,7 @@
 .teclado-box {
     width: 80%; /* Ajuste conforme necessidade */
     height: 380px; /* Ajuste conforme necessidade para dar uma aparência retrato */
-    background-color: var(--color-light-gray);
+    background-color: gray;
     border: 2px solid var(--color-gray);
     border-radius: 8px;
     display: flex;

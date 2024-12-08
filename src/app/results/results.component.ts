@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { VotoService } from '../../services/voto.service';
 import { Voto } from '../../models/voto-manager';
 
@@ -9,7 +9,7 @@ import { Voto } from '../../models/voto-manager';
   styleUrls: ['./results.component.css'],
 })
 export class ResultsComponent implements OnInit {
-  listaVotos: Voto[] = [];
+  listaVotos: Array<Voto> = [];
 
   constructor(private votoService: VotoService) {}
 

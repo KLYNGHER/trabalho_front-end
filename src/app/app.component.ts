@@ -12,4 +12,10 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title = 'urna-eletronica';
+  /*listaDeVotos: Voto[] | undefined;
+
+  atualizarVotos(listaVotos: Voto[]): void {
+    this.listaDeVotos = listaVotos;
+    console.log('Votos no AppComponent:', this.listaDeVotos);
+  }*/
 }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { VotoService } from '../../services/voto.service';
 import { Voto } from '../../models/voto-manager';
 
@@ -9,6 +9,7 @@ import { Voto } from '../../models/voto-manager';
   styleUrls: ['./voting.component.css'],
 })
 export class VotingComponent {
+  
   campo1: string = '';
   campo2: string = '';
 
@@ -26,6 +27,7 @@ export class VotingComponent {
     this.campo1 = '';
     this.campo2 = '';
   }
+  //@Output() votoRegistrado = new EventEmitter<number>(); // @Output 1
 
   votar(): void {
     if (!this.campo1 || !this.campo2) {
@@ -36,6 +38,7 @@ export class VotingComponent {
   
     // Caso os dois campos estejam preenchidos, registra o voto normalmente
     const candidato = parseInt(this.campo1 + this.campo2, 10); // Concatena os campos para formar o número do candidato
+    //this.votoRegistrado.emit(candidato);
     const novoVoto: Voto = { candidato, votos: 1 };
     this.votoService.registrarVoto(novoVoto);
   
@@ -43,7 +46,6 @@ export class VotingComponent {
     this.corrige(); // Limpa os campos após registrar o voto
   }
   
-
   votarBranco(): void {
     const votoBranco: Voto = { candidato: 0, votos: 1 }; // Candidato "0" representa voto em branco
     this.votoService.registrarVoto(votoBranco);

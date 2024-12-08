@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  @Input() titulo!: string;
+  @Input() titulo!: string; //input01
 }

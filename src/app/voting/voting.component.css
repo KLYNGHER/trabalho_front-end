@@ -1,15 +1,32 @@
 
+.teclado-box {
+    width: 80%; /* Ajuste conforme necessidade */
+    height: 380px; /* Ajuste conforme necessidade para dar uma aparência retrato */
+    background-color: var(--color-light-gray);
+    border: 2px solid var(--color-gray);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto ; /* Centraliza horizontalmente no pai */
+  }
+  
 
 /* Estilo para o retângulo "Justiça Eleitoral" */
 .header-box {
-    height: 80px;
+    width: 80%;
+    height: 60px;
     background-color: var(--color-light-gray);
     border: 2px solid var(--color-gray);
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+    margin: 0 auto; /* Centraliza horizontalmente */
+  }
+  
+
 
 .header-box h5 {
     margin: 0;
@@ -21,7 +38,8 @@
 
 /* Estilo para a tela do lado esquerdo */
 .screen-box {
-    height: 300px;
+    height: 350px;
+    width: 110%;
     background-color: var(--color-light-gray);
     border: 2px solid var(--color-gray);
     border-radius: 8px;
@@ -38,9 +56,10 @@
 }
 
 /* Botões */
-.btn-key {
-    height: 60px;
-    width: 100%;
+ /* Ajustes adicionais para os botões */
+ .btn-key {
+    height: 60px;        /* altura fixa do botão */
+    width: 80%;         /* largura fixa do botão */
     font-size: 1.5rem;
     font-weight: bold;
     color: #fff;
@@ -49,19 +68,20 @@
     border-radius: 8px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
     transition: all 0.2s ease-in-out;
+    margin: 0;           /* remove margem extra */
 }
 
 .btn-key:active {
     background-color: var(--color-darker-gray);
     transform: translateY(2px);
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
-   
 }
 
 .btn-action-branco {
     background-color: #fff;
     color: #000;
     border: 2px solid var(--color-gray);
+    height: 50px;
     
 }
 
@@ -69,7 +89,7 @@
     background-color: var(--color-orange);
     color: #fff;
     border: 2px solid var(--color-dark-orange);
-    
+    height: 50px;
   
 }
 
@@ -77,5 +97,6 @@
     background-color: var(--color-green);
     color: #fff;
     border: 2px solid var(--color-dark-green);
-   /* 30% maior */
+   height: 60px;
+   text-align: center;
 }

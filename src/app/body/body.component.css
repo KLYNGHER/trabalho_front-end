@@ -1,11 +1,13 @@
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-  }
+
   
   .row {
     display: flex;
     flex-direction: column; /* Alinha os componentes verticalmente */
     width: 100%;
+  }
+  
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
   }
   

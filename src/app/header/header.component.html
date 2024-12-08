@@ -1,4 +1,19 @@
-<header class="bg-primary text-white text-center p-3">
-    <h1>{{ titulo }}</h1> <!-- Interpolação 2 -->
-  </header>
-  
+<header>
+  <nav class="navbar sticky-top" style="background-color: #336699;" data-bs-theme="dark">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+      <!-- Logo no canto esquerdo -->
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img
+          src="https://www.tre-mt.jus.br/imagens/fotos/tre-pe-logo-js-fundo-azul/@@images/a82f77e6-8d24-4b68-bb01-6e4e3c7b6774.jpeg"
+          alt="Logo Justiça Eleitoral"
+          width="50"
+          height="50"
+          class="d-inline-block">
+      </a>
+      <!-- Título centralizado -->
+      <h2 class="m-0 text-white text-center w-100 position-absolute">{{ titulo }}</h2>
+    </div>
+  </nav>
+</header>
+
+<hr>

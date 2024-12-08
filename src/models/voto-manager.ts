@@ -13,6 +13,5 @@ export interface IVoto {
       this.candidato = voto.candidato;
       this.votos = voto.votos;
     }
+
   }
-  
-  

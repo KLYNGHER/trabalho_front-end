@@ -1,0 +1,16 @@
+
+
+:root {
+
+    /* Variáveis de cores */
+    --color-white: #ffffff;
+    --color-gray: #6c757d;
+    --color-light-gray: #e9ecef;
+    --color-dark-gray: #444;
+    --color-darker-gray: #333;
+    --color-border-gray: #222;
+    --color-orange: #e67e22;
+    --color-dark-orange: #d35400;
+    --color-green: #27ae60;
+    --color-dark-green: #1e8449;
+}

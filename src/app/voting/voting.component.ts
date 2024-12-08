@@ -28,11 +28,21 @@ export class VotingComponent {
   }
 
   votar(): void {
-    const candidato = parseInt(this.campo1 + this.campo2, 10);
+    if (!this.campo1 || !this.campo2) {
+      // Se algum dos campos estiver vazio, considera como voto em branco
+      this.votarBranco();
+      return;
+    }
+  
+    // Caso os dois campos estejam preenchidos, registra o voto normalmente
+    const candidato = parseInt(this.campo1 + this.campo2, 10); // Concatena os campos para formar o número do candidato
     const novoVoto: Voto = { candidato, votos: 1 };
     this.votoService.registrarVoto(novoVoto);
-    this.corrige();
+  
+    alert(`Voto registrado para o candidato ${candidato}`);
+    this.corrige(); // Limpa os campos após registrar o voto
   }
+  
 
   votarBranco(): void {
     const votoBranco: Voto = { candidato: 0, votos: 1 }; // Candidato "0" representa voto em branco

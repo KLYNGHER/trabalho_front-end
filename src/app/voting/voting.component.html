@@ -1,45 +1,50 @@
-<div class="container bg-white shadow rounded p-4" style="max-width: 700px;">
+<div class="container urna bg-white shadow rounded p-2">
     <div class="row">
-        <!-- Tela da Urna -->
-        <div class="col-md-6">
-            <div class="screen-box mb-3">
-                <div class="d-flex gap-2">
-                    <input [value]="campo1" class="form-control" maxlength="1" readonly>
-                    <input [value]="campo2" class="form-control" maxlength="1" readonly>
-                </div>
-            </div>
-            <p class="text-muted text-center">Digite seu voto e pressione CONFIRMA.</p>
+      <!-- Tela da Urna -->
+      <div class="col-md-6">
+        <div class="screen-box mb-3">
+          <div class="d-flex gap-2">
+            <input [value]="campo1" class="form-control" maxlength="1" readonly>
+            <input [value]="campo2" class="form-control" maxlength="1" readonly>
+          </div>
         </div>
-
-        <!-- Teclado Numérico e Retângulo -->
-        <div class="col-md-6">
-            <!-- Retângulo "JUSTIÇA ELEITORAL" -->
-            <div class="header-box mb-3">
-                <h5>Justiça Eleitoral</h5>
-            </div>
-
-            <!-- Teclado Numérico -->
-            <div class="row g-2 mb-3 text-center">
-                <!-- Teclas Numéricas -->
-                @for (numero of [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]; track numero) {
-                    <div class="col-4">
-                        <button class="btn-key" (click)="inserir(numero)">{{ numero }}</button>
-                    </div>
-                }
-            </div>
-
-            <!-- Botões de Ação -->
-            <div class="row g-2 text-center">
-                <div class="col-4">
-                    <button class="btn btn-action btn-action-branco w-100" (click)="votarBranco()">BRANCO</button>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-action btn-action-corrige w-100" (click)="corrige()">CORRIGE</button>
-                </div>
-                <div class="col-4">
-                    <button class="btn btn-action btn-action-confirma w-100" (click)="votar()">CONFIRMA</button>
-                </div>
-            </div>
+        <p class="text-muted text-center">Digite seu voto e pressione CONFIRMA.</p>
+      </div>
+  
+      <!-- Teclado Numérico e Retângulo -->
+      <div class="col-md-6">
+        <!-- Retângulo "JUSTIÇA ELEITORAL" -->
+        <div class="header-box mb-3">
+          <h5>Justiça Eleitoral</h5>
         </div>
+  
+        <!-- Teclado Numérico -->
+        <div class="row g-2 mb-3 text-center">
+          <!-- Teclas Numéricas -->
+          @for (numero of [1, 2, 3, 4, 5, 6, 7, 8, 9]; track numero) {
+            <div class="col-4">
+              <button class="btn-key" (click)="inserir(numero)">{{ numero }}</button>
+            </div>
+          }
+          <!-- Botão 0 Centralizado -->
+          <div class="col-4 offset-4">
+            <button class="btn-key" (click)="inserir(0)">0</button>
+          </div>
+        </div>
+  
+        <!-- Botões de Ação -->
+        <div class="row g-2 button-row text-center">
+          <div class="col-4">
+            <button class="btn btn-action btn-action-branco w-100" (click)="votarBranco()">BRANCO</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-action btn-action-corrige w-100" (click)="corrige()">CORRIGE</button>
+          </div>
+          <div class="col-4">
+            <button class="btn btn-action btn-action-confirma w-100" (click)="votar()">CONFIRMA</button>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+  
